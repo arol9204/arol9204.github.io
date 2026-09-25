@@ -1,62 +1,151 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>English Speaking AI-Examiner - Project Details</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>English Speaking AI-Examiner — Alejandro Rodriguez</title>
+<meta name="description" content="Speak an answer, get scored on it. Whisper transcribes the response and an LLM grades grammar, vocabulary, coherence and fluency for IELTS/CELPIP practice." />
+<meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314161a'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' fill='%23fbfbf9' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="assets/css/site.css" />
+<script>
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
 </head>
-<body class="is-preload">
+<body>
 
-<article class="wrapper style1">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <header>
-                    <h2>English Speaking AI-Examiner</h2>
-                </header>
+<a class="skip" href="#main">Skip to content</a>
 
-                <h2><a href="https://github.com/arol9204/English_Speaking_AI_Examiner" target= "_blank" class="icon brands fa-github"><span class="label">Github</span></a></h2>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+</svg>
 
-                <p>An app that allows users to answer questions in English and receive feedback about how well they answered.</p>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">AR</span>
+      <span>alejandro&#8203;rodriguez</span>
+    </a>
+    <a class="back" href="index.html#work"><svg aria-hidden="true"><use href="#i-arrow-left"/></svg> All work</a>
+    <button class="btn btn-icon btn-ghost" data-theme-toggle type="button" aria-label="Switch theme">
+      <svg class="icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      <svg class="icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+    </button>
+  </div>
+</header>
 
-                <div class="image fit">
-                    <img src="images/English Speaking AI-examiner.png" alt="English Speaking AI-Examiner" />
-                </div>
+<main id="main">
 
-                <section>
-                    <h3>Project Details</h3>
-                    <p>As a non-native English speaker who migrated to Canada, I've been on a mission to improve my English skills. I was motivated to enhance my English speaking skills, but the high costs of language courses discouraged me. That's when I got the idea to create an app that could help me improve without financial constraints.</p>
+  <section class="case-hero">
+    <div class="wrap">
+      <p class="kicker">Speech &middot; LLM &middot; Language learning</p>
+      <h1>English Speaking AI-Examiner</h1>
+      <p class="lead">
+        Answer a question out loud and get graded on it. Whisper turns speech into text, an LLM reads the
+        answer against the question, and you get feedback on grammar, vocabulary, coherence and fluency.
+      </p>
 
-                    <h4>What it does</h4>
-                    <p>This application aims to provide a comprehensive language learning experience, focusing specifically on improving English speaking skills for test takers, such as those preparing for the IELTS/CELPIP exam.
-                        The application utilizes the Whisper model to transcribe the user's spoken responses. To provide a comprehensive evaluation, the application leverages a Language Learning Model (LLM) as well.
-                         The LLM takes both the transcribed text and the corresponding question as input. By considering the context of the question and the user's response, the LLM generates an assessment of the given answer.
-                          This assessment includes analyzing grammar, vocabulary usage, coherence, and fluency, among other language aspects.</p>
-                    <h4>How I built it</h4>
-                    <p>I started developing the project using Google Colab, I integrated the "Whisper" model from OpenAI with a Language Learning Model (LLM) to provide feedback on English language usage.
-                         It was an exciting journey as I combined these technologies to create a useful tool for language learners.</p>
-                
-                </section>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/arol9204/English_Speaking_AI_Examiner" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-github"/></svg> View the code
+        </a>
+        <a class="btn" href="https://www.youtube.com/watch?v=oiwRZ7FBA3E" target="_blank" rel="noopener">
+          Watch the demo <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+        </a>
+      </div>
 
-                <section>
-                    <h3>Additional Content</h3>
-                    <p>Flawless English: Master the Language with Precision and Confidence Using AI.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/oiwRZ7FBA3E?si=u8vzEdmUi-ERUGsi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </section>
-
-                <p><a href="index.html">&lt; Back to Portfolio</a></p>
-            </div>
-        </div>
+      <dl class="case-meta">
+        <div><dt>Role</dt><dd>Sole author</dd></div>
+        <div><dt>Stack</dt><dd>Python, Whisper, LangChain, Gradio</dd></div>
+        <div><dt>Model</dt><dd>OpenAI Whisper + databricks/dolly LLM</dd></div>
+        <div><dt>Built for</dt><dd>IELTS / CELPIP speaking practice</dd></div>
+      </dl>
     </div>
-</article>
+  </section>
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="prose">
 
+        <h2>Why I built it</h2>
+        <p>
+          I moved to Canada as a non-native English speaker and wanted to get better at speaking. Language
+          courses that give real feedback are expensive; free practice gives you no feedback at all. So I
+          built the missing piece: something that listens to an answer and tells you honestly how it landed.
+        </p>
+
+        <figure class="figure">
+          <img src="images/English%20Speaking%20AI-examiner.png" alt="The English Speaking AI-Examiner interface" loading="lazy" decoding="async" />
+          <figcaption>Record an answer, read the assessment.</figcaption>
+        </figure>
+
+        <h2>What it does</h2>
+        <ol class="steps">
+          <li>The app poses an exam-style question, of the kind used in IELTS and CELPIP speaking sections.</li>
+          <li>The user records a spoken answer.</li>
+          <li>Whisper transcribes the audio.</li>
+          <li>The LLM receives both the question and the transcript, so it can judge whether the answer is actually on topic.</li>
+          <li>It returns an assessment covering grammar, vocabulary usage, coherence and fluency.</li>
+        </ol>
+        <p>
+          Passing the <strong>question</strong> alongside the transcript is the detail that makes the feedback
+          useful. Scoring a transcript alone tells you the English was fine; scoring it in context tells you
+          the answer missed the point.
+        </p>
+
+        <h2>How I built it</h2>
+        <p>
+          Development started in Google Colab, where I wired OpenAI's <strong>Whisper</strong> model to a
+          language model through <strong>LangChain</strong> and put a <strong>Gradio</strong> interface on
+          top so it could be used by anyone with a browser and a microphone.
+        </p>
+
+        <h2>Demo</h2>
+        <div class="embed">
+          <iframe
+            src="https://www.youtube.com/embed/oiwRZ7FBA3E"
+            title="English Speaking AI-Examiner demo"
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+
+        <h2>What I took from it</h2>
+        <ul class="bullets">
+          <li>Transcription quality sets the ceiling on everything downstream — a mis-heard word reads as a grammar error.</li>
+          <li>The prompt is part of the product. Asking for rubric-shaped output made the feedback consistent enough to act on.</li>
+          <li>Building the thing I needed myself was a far better spec than any requirement list.</li>
+        </ul>
+
+      </div>
+
+      <div class="next-nav">
+        <a class="back" href="index.html#work"><svg aria-hidden="true"><use href="#i-arrow-left"/></svg> Back to all work</a>
+        <a class="btn" href="project_details_rs.html">Next: RecyclingNet <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>&copy; <span data-year>2026</span> Alejandro Rodriguez Orama &middot; Windsor, Ontario</p>
+    <div class="foot-links"><a class="card-link" href="index.html">Portfolio home</a></div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
 </body>
 </html>

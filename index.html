@@ -1,189 +1,697 @@
-<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Alejandro Rodriguez Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Alejandro Rodriguez — Data Analyst &amp; Data Scientist</title>
+<meta name="description" content="Data analyst in Windsor, Ontario. Nine years across official statistics and supply chain analytics — Python, SQL, Domo ETL, Power BI, and computer vision." />
+<meta name="author" content="Alejandro Rodriguez Orama" />
+<meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)" />
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/ARO.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Alejandro Rodriguez</a></h1>
-					<p> <br >Mathematician | Data Analyst and Scientist<br /> </p>
-					<p> <br > <i class="fa fa-map-pin" ></i> Windsor ⊂ Ontario ⊂ Canada<br /> </p>
-					<p> <br > <i class="fa fa-envelope" ></i> alero0428@gmail.com<br /> </p>
-					<p> <br > <i class="fa fa-mobile" ></i> +1 (519) 991 7324<br /> </p>
-					
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Alejandro Rodriguez — Data Analyst &amp; Data Scientist" />
+<meta property="og:description" content="Data analyst. Statistics, ETL pipelines and dashboards that people actually use — currently in supply chain analytics at Mucci Farms." />
+<meta property="og:url" content="https://arol9204.github.io/" />
+<meta property="og:image" content="https://arol9204.github.io/images/banner.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
 
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314161a'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' fill='%23fbfbf9' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E" />
 
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="assets/css/site.css" />
 
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<!-- <li><a href="#two">Things I Can Do</a></li>-->
-						<li><a href="#three">Projects</a></li>
-						<li><a href="#four">Contact</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						
-						<li><a href="https://www.linkedin.com/in/alejandro-rodriguez-orama-3a2b24155/" target= "_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://github.com/arol9204" target= "_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="images/Data Analyst - Alejandro Rodriguez Resume.pdf" target= "_blank" class="fa fa-file"><span class="label"></span></a></li>
-						
-						
-					</ul>
-				</footer>
-			</section>
+<script>
+  // Apply the saved theme before first paint so there is no flash.
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<a class="skip" href="#main">Skip to content</a>
 
-				<!-- Main -->
-					<div id="main">
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+  <symbol id="i-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><path d="M12 2v7.5M12 14.5V22M4.2 7l6.5 3.8M13.3 13.2l6.5 3.8M19.8 7l-6.5 3.8M10.7 13.2 4.2 17"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 15l3.5-4 3 2.5L20 6"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4"/></symbol>
+  <symbol id="i-window" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M2.5 9h19M6 6.5h.01M8.5 6.5h.01"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 9-10-5L2 9l10 5 10-5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="m8.2 14.3-1.4 7L12 18.5l5.2 2.8-1.4-7"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+</svg>
 
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>About</h2>
-										<p>Data Analyst and Machine Learning Enthusiast with Expertise in Statistical Analysis, Data Visualization, and Survey Management.</p>
-									</header>
-									
-								</div>
-							</section>
+<!-- ============ Nav ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark">AR</span>
+      <span>alejandro&#8203;rodriguez</span>
+    </a>
 
-						
-						<!-- Two -->
-						<!-- 
-							<section id="two">
-								<div class="container">
-									<header class="major">
-									<h2>Things I Can Do</h2>
-									</header>
-									<p>As a skilled Data Analyst, I possess a deep analytical acumen with proficiency in Python, R, SQL, and Tableau, enabling me to adeptly analyze complex datasets, design and lead research initiatives.</p>
-									<ul class="feature-icons">
-										<li class="icon solid fa-code">Programming</li>
-										<li class="icon solid fa-cubes">Innovation and Problem Solving</li>
-										<li class="icon solid fa-book">Self-Learner</li>
-										<li class="icon solid fa-coffee">Independent Worker</li>
-										<li class="icon solid fa-bolt">Statistical and Analytical Expertise</li>
-										<li class="icon solid fa-users">Team Worker</li>
-									</ul>
-								</div>
-							</section>
-						
-						-->
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#background">Background</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<header class="major">
-									<h2>Projects</h2>
-									</header>
+    <button class="btn btn-icon btn-ghost" data-theme-toggle type="button" aria-label="Switch theme">
+      <svg class="icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      <svg class="icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+    </button>
 
+    <a class="btn btn-primary" href="images/Data%20Analyst%20-%20Alejandro%20Rodriguez%20Resume.pdf" target="_blank" rel="noopener">
+      <svg aria-hidden="true"><use href="#i-file"/></svg>
+      Résumé
+    </a>
+  </div>
+</header>
 
-									<div class="features">
-										
-										<!-- Project 1 -->
-										<article>
-											<a href="#" class="image"><img src="images/UI Tab 1.png" alt="" /></a>
-											<div class="inner">
-												<h4><a href="project_details_rs.html"  target= "_blank">Recycling Collection Service</a></h4>
-												<p>An AI app powered by an object detection model to detect and request the pick up for those recyclable objects.</p>
-												<h5>Python • SQL • Shiny</h5>	
-												
-												<a href="project_details_rs.html" class="button primary">Read More</a>
-											</div>
-										</article>
+<main id="main">
 
-										<!-- Project 2 -->
-										<article>
-											<a href="#" class="image"><img src="images/tableaustory.png" alt="" /></a>
-											<div class="inner">
-												<h4><a href="project_details_EV.html" target= "_blank"> Electic Vehicles in Washington State, US</a></h4>
-												<p>A Tableau story with different dashboards about the EV population growth in Washington.</p>
-												<h5>Tableau • Data Visualization • Spider Chart</h5>	
-												<a href="project_details_EV.html" class="button primary">Read More</a>
-											</div>
-										</article>
+  <!-- ============ Hero ============ -->
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="status"><span class="dot"></span> Data Analyst @ Mucci Farms</span>
 
+          <h1>Alejandro Rodriguez</h1>
+          <p class="role">Data Analyst <span class="sep">/</span> Data Scientist <span class="sep">/</span> Mathematician</p>
 
-										<!-- Project 3 -->
-										<article>
-											<a href="#" class="image"><img src="images/Future Mobility Challenge 2023.jpeg" alt="" /></a>
-											<div class="inner">
-												<h4><a href="project_details_CTS.html"  target= "_blank">1st Place Future Mobility Challenge</a></h4>
-												<p>Exploring different CNN models to classify traffic sign images. $500 <i class="fa fa-gift"></i> Cash price  </p>
-												<h5>Python • Deep Learning • CNN models</h5>	
-												<a href="project_details_CTS.html" class="button primary">Read More</a>
-											</div>
-										</article>
+          <p class="lead">
+            Nine years turning messy data into decisions — national household surveys in Havana, and now
+            the ETL pipelines, forecasting dashboards and internal tools behind global produce sourcing at
+            Mucci Farms. I like problems where the statistics and the shipping both matter.
+          </p>
 
-										<!-- Project 4 -->
-										<article>
-											<a href="#" class="image"><img src="images/English Speaking AI-examiner.png" alt="" /></a>
-											<div class="inner">
-												<h4><a href="project_details_ESAI.html"  target= "_blank">English Speaking AI-Examiner</a></h4>
-												<p>An app that allows users to answer questions in English and receive feedback about how well they answered.</p>
-												<h5>Python • LangChain • databricks/dolly LLM model • Gradio</h5>	
-												<a href="project_details_ESAI.html" class="button primary">Read More</a>
-											</div>
-										</article>
+          <div class="hero-meta">
+            <span><svg aria-hidden="true"><use href="#i-pin"/></svg> Windsor, Ontario, Canada</span>
+            <a href="mailto:alero0428@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg> alero0428@gmail.com</a>
+            <a href="tel:+15199917324"><svg aria-hidden="true"><use href="#i-phone"/></svg> +1 (519) 991-7324</a>
+          </div>
 
-										<!-- Project 5 -->
-										<article>
-											<a href="#" class="image"><img src="images/Fuel_consumption_dataset-cover.jpg" alt="" /></a>
-											<div class="inner">
-												<h4><a href="Project1.html"  target= "_blank">EDA with R (Fuel Consuptions Case)</a></h4>
-												<p>Visualize variables of the data to get a better understand of the nature of the variables presented.</p>
-												<h5>R • R Markdown • tydiverse • ggplot</h5>	
-												<a href="Project1.html" class="button primary">Read More</a>
-											</div>
-										</article>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#work">View selected work</a>
+            <a class="btn" href="https://www.linkedin.com/in/alejandro-rodriguez-orama-3a2b24155/" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-linkedin"/></svg> LinkedIn
+            </a>
+            <a class="btn" href="https://github.com/arol9204" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-github"/></svg> GitHub
+            </a>
+          </div>
+        </div>
 
-									</div>
-								</div>
-							</section>
+        <div class="portrait">
+          <img src="images/ARO.jpg" alt="Portrait of Alejandro Rodriguez" width="440" height="440" />
+        </div>
+      </div>
 
+      <dl class="stats">
+        <div class="stat">
+          <dd>9+ yrs</dd>
+          <dt>Analytics, statistics &amp; data engineering</dt>
+        </div>
+        <div class="stat">
+          <dd>4.0 GPA</dd>
+          <dt>Faculty Academic Award 2023</dt>
+        </div>
+        <div class="stat">
+          <dd>1st place</dd>
+          <dt>Future Mobility Challenge 2023</dt>
+        </div>
+        <div class="stat">
+          <dd>~2 hrs/day</dd>
+          <dt>Manual triage automated away at Mucci Farms</dt>
+        </div>
+      </dl>
+    </div>
+  </section>
 
+  <!-- ============ Work ============ -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Selected work</p>
+        <h2>Projects, end to end</h2>
+      </div>
 
+      <div class="project-grid">
 
-					</div>
+        <!-- RecyclingNet -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="images/3.%20Dashboard%20tab.png" alt="Dashboard tab of the recycling collection app" loading="lazy" decoding="async" width="1200" height="675" />
+            <span class="badge badge-win">Live</span>
+          </div>
+          <div class="card-body">
+            <h3>
+              <a href="project_details_rs.html">RecyclingNet <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </h3>
+            <p>
+              An Ontario recycling pickup platform built on computer vision. Photograph a pile of containers;
+              a fine-tuned YOLO11 oriented-bounding-box model counts them by class, geotags the request and
+              turns it into a pickup someone can profit from.
+            </p>
+            <div class="chips">
+              <span class="chip chip-accent">Python</span>
+              <span class="chip">YOLO11 OBB</span>
+              <span class="chip">Label Studio</span>
+              <span class="chip">PostgreSQL</span>
+              <span class="chip">Plotly</span>
+            </div>
+            <div class="card-foot">
+              <a class="card-link" href="https://recyclingnet.org/" target="_blank" rel="noopener">recyclingnet.org <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+              <a class="card-link" href="project_details_rs.html">Case study <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+              <a class="card-link" href="https://github.com/arol9204/Capstone" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg> Code</a>
+            </div>
+          </div>
+        </article>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Alejandro Rodriguez</li>
-							</ul>
-						</div>
-					</section>
+        <!-- Traffic signs -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="images/traffic%20signs.png" alt="Grid of traffic sign images from the GTSRB dataset" loading="lazy" decoding="async" width="1200" height="675" />
+            <span class="badge badge-win">1st place</span>
+          </div>
+          <div class="card-body">
+            <h3>
+              <a href="project_details_CTS.html">Traffic Sign Classification for AVs <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </h3>
+            <p>
+              Winning entry in the 2023 Future Mobility Challenge: deep CNNs trained from scratch and
+              fine-tuned from VGG16 and ResNet V2 to classify 43 traffic-sign classes.
+            </p>
+            <div class="chips">
+              <span class="chip chip-accent">TensorFlow</span>
+              <span class="chip">CNN</span>
+              <span class="chip">Transfer learning</span>
+              <span class="chip">Matplotlib</span>
+            </div>
+            <div class="card-foot">
+              <a class="card-link" href="project_details_CTS.html">Read the case study <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+              <a class="card-link" href="https://github.com/arol9204/CLASSIFY_TRAFFIC_SIGNS" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg> Code</a>
+            </div>
+          </div>
+        </article>
 
-			</div>
+        <!-- EV Tableau -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="images/tableaustory.png" alt="Tableau story about the electric vehicle population in Washington State" loading="lazy" decoding="async" width="1200" height="675" />
+            <span class="badge">Tableau</span>
+          </div>
+          <div class="card-body">
+            <h3>
+              <a href="project_details_EV.html">EV Adoption in Washington State <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </h3>
+            <p>
+              A Tableau story on how fast the EV fleet is growing, who is winning which city, and how
+              range, price and charging speed compare across manufacturers.
+            </p>
+            <div class="chips">
+              <span class="chip chip-accent">Tableau</span>
+              <span class="chip">Data storytelling</span>
+              <span class="chip">KPIs</span>
+              <span class="chip">Geospatial</span>
+            </div>
+            <div class="card-foot">
+              <a class="card-link" href="project_details_EV.html">Read the case study <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+              <a class="card-link" href="https://public.tableau.com/app/profile/alejandro.rodriguez.orama/viz/EVpopulationinWashington/Story" target="_blank" rel="noopener">Live dashboard <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+          </div>
+        </article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <!-- English AI examiner -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="images/English%20Speaking%20AI-examiner.png" alt="Interface of the English Speaking AI Examiner" loading="lazy" decoding="async" width="1200" height="675" />
+            <span class="badge">LLM</span>
+          </div>
+          <div class="card-body">
+            <h3>
+              <a href="project_details_ESAI.html">English Speaking AI-Examiner <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </h3>
+            <p>
+              Speak an answer, get scored on it. Whisper transcribes the response and an LLM grades
+              grammar, vocabulary, coherence and fluency — IELTS/CELPIP practice without the price tag.
+            </p>
+            <div class="chips">
+              <span class="chip chip-accent">Python</span>
+              <span class="chip">Whisper</span>
+              <span class="chip">LangChain</span>
+              <span class="chip">Gradio</span>
+            </div>
+            <div class="card-foot">
+              <a class="card-link" href="project_details_ESAI.html">Read the case study <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+              <a class="card-link" href="https://github.com/arol9204/English_Speaking_AI_Examiner" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg> Code</a>
+            </div>
+          </div>
+        </article>
 
-	</body>
+        <!-- EDA in R -->
+        <article class="card reveal">
+          <div class="card-media">
+            <img src="images/Fuel_consumption_dataset-cover.jpg" alt="Fuel consumption dataset cover" loading="lazy" decoding="async" width="1200" height="675" />
+            <span class="badge">EDA</span>
+          </div>
+          <div class="card-body">
+            <h3>
+              <a href="Project1.html" target="_blank" rel="noopener">Fuel Consumption EDA in R <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </h3>
+            <p>
+              A full exploratory pass over Canadian fuel-consumption ratings: distributions, correlations
+              and the emissions story behind engine size, written up in R Markdown.
+            </p>
+            <div class="chips">
+              <span class="chip chip-accent">R</span>
+              <span class="chip">tidyverse</span>
+              <span class="chip">ggplot2</span>
+              <span class="chip">R Markdown</span>
+            </div>
+            <div class="card-foot">
+              <a class="card-link" href="Project1.html" target="_blank" rel="noopener">Open the report <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="sub-head reveal">
+        <h3>Shipped in production</h3>
+        <p>Internal systems running at Mucci Farms. The data belongs to the business, so these have no public demo — happy to walk through any of them.</p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="card card-compact reveal">
+          <div class="card-body">
+            <span class="card-tag">Domo &middot; Python</span>
+            <h3>Monthly Supply Chain Report</h3>
+            <p>
+              An automated monthly pipeline that produces fill-rate analysis, vendor KPI dashboards and
+              Sankey diagrams of supply flow, rendered out through nbconvert and distributed on a schedule.
+            </p>
+            <div class="chips">
+              <span class="chip chip-accent">Domo ETL</span>
+              <span class="chip">Python</span>
+              <span class="chip">Plotly</span>
+              <span class="chip">nbconvert</span>
+              <span class="chip">Power Automate</span>
+            </div>
+            <div class="card-foot"><span class="card-note">Internal &mdash; no public write-up</span></div>
+          </div>
+        </article>
+
+        <article class="card card-compact reveal">
+          <div class="card-body">
+            <span class="card-tag">React &middot; Airtable</span>
+            <h3>Grower Advance Request Board Document</h3>
+            <p>
+              A board-facing financial document that assembles itself. A Softr Vibe React block pulls 31 live
+              Airtable fields — financial impact, risk profile, grower track record — into a risk-tiered
+              layout engineered for print, down to the signature blocks and page breaks.
+            </p>
+            <div class="chips">
+              <span class="chip chip-accent">React</span>
+              <span class="chip">Softr Vibe</span>
+              <span class="chip">Airtable</span>
+              <span class="chip">Tailwind</span>
+              <span class="chip">Print CSS</span>
+            </div>
+            <div class="card-foot"><span class="card-note">Internal &mdash; no public write-up</span></div>
+          </div>
+        </article>
+
+        <article class="card card-compact reveal">
+          <div class="card-body">
+            <span class="card-tag">Geospatial &middot; CRM</span>
+            <h3>Grower Network CRM</h3>
+            <p>
+              An internal portal for the grower network, including a hurricane-risk layer that maps live storm
+              cone data against the GPS coordinates of Mexico-based partner farms — so sourcing knows which
+              supply is in the path before it is.
+            </p>
+            <div class="chips">
+              <span class="chip chip-accent">Airtable</span>
+              <span class="chip">Softr</span>
+              <span class="chip">Geospatial analysis</span>
+              <span class="chip">API integration</span>
+            </div>
+            <div class="card-foot"><span class="card-note">Internal &mdash; no public write-up</span></div>
+          </div>
+        </article>
+
+        <article class="card card-compact reveal">
+          <div class="card-body">
+            <span class="card-tag">Node.js &middot; PDF</span>
+            <h3>QC Policy Manager</h3>
+            <p>
+              A web app for managing quality-control documentation and generating it as print-ready PDFs on
+              demand, backed by Airtable and rendered through Puppeteer.
+            </p>
+            <div class="chips">
+              <span class="chip chip-accent">Node.js</span>
+              <span class="chip">Express</span>
+              <span class="chip">Airtable</span>
+              <span class="chip">Puppeteer</span>
+            </div>
+            <div class="card-foot"><span class="card-note">Internal &mdash; no public write-up</span></div>
+          </div>
+        </article>
+
+        <article class="card card-compact reveal">
+          <div class="card-body">
+            <span class="card-tag">Audit trail</span>
+            <h3>Pack Plan Change Log</h3>
+            <p>
+              An event-sourced audit trail over daily pack quantities: every change is logged as a delta
+              automatically, and a companion report block makes the history of any plan readable at a glance.
+            </p>
+            <div class="chips">
+              <span class="chip chip-accent">Airtable</span>
+              <span class="chip">Automations</span>
+              <span class="chip">Softr</span>
+              <span class="chip">Event sourcing</span>
+            </div>
+            <div class="card-foot"><span class="card-note">Internal &mdash; no public write-up</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Skills ============ -->
+  <section class="section" id="skills">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Toolkit</p>
+        <h2>What I work with</h2>
+      </div>
+
+      <div class="skill-grid">
+        <div class="skill-card reveal">
+          <h3><svg aria-hidden="true"><use href="#i-code"/></svg> Programming &amp; scripting</h3>
+          <div class="chips">
+            <span class="chip chip-accent">Python</span><span class="chip chip-accent">SQL</span>
+            <span class="chip chip-accent">R</span><span class="chip">TypeScript</span>
+            <span class="chip">JavaScript</span><span class="chip">Node.js</span>
+            <span class="chip">Pandas / NumPy</span><span class="chip">Jupyter</span>
+            <span class="chip">Window functions</span><span class="chip">Production SQL views</span>
+            <span class="chip">Git</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><svg aria-hidden="true"><use href="#i-target"/></svg> Analysis &amp; modelling</h3>
+          <div class="chips">
+            <span class="chip">Fill-rate &amp; volume-weighted KPIs</span>
+            <span class="chip">Vendor profitability</span>
+            <span class="chip">Supply-chain flow analysis</span>
+            <span class="chip">Forecasting &amp; yield projection</span>
+            <span class="chip">Multi-factor risk scoring</span>
+            <span class="chip">Multi-currency / EBITDA modelling</span>
+            <span class="chip">Geospatial risk</span>
+            <span class="chip">Survey sampling</span>
+            <span class="chip">Imputation &amp; outlier detection</span>
+            <span class="chip">Hypothesis testing</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><svg aria-hidden="true"><use href="#i-db"/></svg> Data engineering &amp; ETL</h3>
+          <div class="chips">
+            <span class="chip chip-accent">Domo Magic ETL</span>
+            <span class="chip">Domo SQL dataflows</span>
+            <span class="chip">Domo Jupyter Workspaces</span>
+            <span class="chip">Airtable schema design</span>
+            <span class="chip">API integration</span>
+            <span class="chip">Event-sourced audit logs</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Power Automate</span>
+            <span class="chip">REDCap</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><svg aria-hidden="true"><use href="#i-chart"/></svg> BI &amp; visualization</h3>
+          <div class="chips">
+            <span class="chip chip-accent">Domo</span><span class="chip chip-accent">Power BI</span>
+            <span class="chip">Tableau</span><span class="chip">Plotly</span>
+            <span class="chip">ggplot2</span><span class="chip">Matplotlib</span>
+            <span class="chip">Sankey diagrams</span><span class="chip">Excel</span>
+            <span class="chip">R Markdown</span>
+            <span class="chip">Board-level reporting</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><svg aria-hidden="true"><use href="#i-brain"/></svg> Machine learning &amp; vision</h3>
+          <div class="chips">
+            <span class="chip chip-accent">YOLO11 OBB</span>
+            <span class="chip">TensorFlow</span><span class="chip">scikit-learn</span>
+            <span class="chip">Transfer learning</span><span class="chip">CNNs</span>
+            <span class="chip">Label Studio</span><span class="chip">Roboflow</span>
+            <span class="chip">Colab GPU training</span><span class="chip">AdamW</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><svg aria-hidden="true"><use href="#i-window"/></svg> Application development</h3>
+          <div class="chips">
+            <span class="chip chip-accent">React</span><span class="chip">Express</span>
+            <span class="chip">Tailwind</span><span class="chip">shadcn/ui</span>
+            <span class="chip">Softr Vibe blocks</span><span class="chip">Puppeteer</span>
+            <span class="chip">Print / PDF engineering</span>
+            <span class="chip">Shiny</span><span class="chip">Gradio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Experience ============ -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Experience</p>
+        <h2>Where I have done this</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-top">
+            <h3>Data Analyst</h3>
+            <span class="tl-org">Mucci Farms</span>
+            <span class="tl-when">Feb 2025 &ndash; present</span>
+          </div>
+          <p class="tl-where">Kingsville, Ontario</p>
+          <ul class="tl-points">
+            <li>Automated purchase-order profitability reporting by vendor in Domo — weekly through annual — integrating ERP data so the Global Sourcing Manager sees margin variance and supply-chain KPIs without asking for them.</li>
+            <li>Built and maintain a supply forecast fill-rate dashboard tracking performance against weekly supply plans across <strong>20+ contracted and owned farms</strong> and <strong>35+ commodities</strong>.</li>
+            <li>Engineered an end-to-end rejection workflow in Domo ETL: it ingests customer rejection records from the ERP, extracts grower, case count, reason, PO reference and dates, then notifies the responsible grower liaison — roughly two hours of daily manual email triage, gone.</li>
+            <li>Developed sales and supply budget reporting, aggregating inbound volumes by commodity across every partner and owned farm to support budget-to-actual variance analysis.</li>
+            <li>Architecting a Grower Portal on Softr and Airtable with role-based access for farm users and internal staff: weekly forecast submission, program management, long-term volume projection and pack plan visibility.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-top">
+            <h3>Data Analyst Intern</h3>
+            <span class="tl-org">St. Clair College</span>
+            <span class="tl-when">Jul 2022 &ndash; Jul 2023</span>
+          </div>
+          <p class="tl-where">Windsor, Ontario</p>
+          <ul class="tl-points">
+            <li>Built and ran the REDCap database for the <em>1000 Books Before Kindergarten</em> study, designing the entry forms and the pre/post-test surveys.</li>
+            <li>Ran quality control on incoming data, which sharpened the measurement of the program's effect on early childhood literacy.</li>
+            <li>Wrote the descriptive analysis report, turning survey output into graphics stakeholders and the project manager could read at a glance.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-top">
+            <h3>Data Collection Analyst</h3>
+            <span class="tl-org">PFF FC</span>
+            <span class="tl-when">Mar 2022 &ndash; Jul 2022</span>
+          </div>
+          <p class="tl-where">Remote &mdash; Windsor, Ontario</p>
+          <ul class="tl-points">
+            <li>Collected match statistics from soccer games through PFF FC's data collection system.</li>
+            <li>Worked on PFF's <em>On the Ball</em> event-level data collection.</li>
+          </ul>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-top">
+            <h3>Statistical Analyst</h3>
+            <span class="tl-org">Statistics and Information Office</span>
+            <span class="tl-when">Sep 2015 &ndash; Oct 2021</span>
+          </div>
+          <p class="tl-where">Havana, Cuba</p>
+          <ul class="tl-points">
+            <li>Designed questionnaires and implemented sampling strategies for national household surveys.</li>
+            <li>Compiled tables, charts and summary statistics in R for research papers and official reports.</li>
+            <li>Collected, consolidated and cross-tabulated data from multiple sources in SQL to prepare draft reports for supervisors and researchers.</li>
+            <li>Processed data in R to implement the Oxford (OPHI) methodology for measuring multidimensional poverty.</li>
+            <li>Applied imputation, cleansing, outlier detection and consistency rules to protect data quality — automating the validation ruleset in R cut validation time by 80%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Background ============ -->
+  <section class="section" id="background">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="kicker">Background</p>
+        <h2>Education, credentials &amp; publications</h2>
+      </div>
+
+      <div class="split">
+        <div class="reveal">
+          <h3>Education</h3>
+          <div class="stack-list">
+            <div class="stack-row">
+              <svg aria-hidden="true"><use href="#i-cap"/></svg>
+              <div>
+                <strong>Post-graduate, Data Analytics for Business</strong>
+                <span>St. Clair College, Windsor &middot; 2022&ndash;2023 &middot; 4.0 GPA, Faculty Academic Award 2023</span>
+              </div>
+            </div>
+            <div class="stack-row">
+              <svg aria-hidden="true"><use href="#i-cap"/></svg>
+              <div>
+                <strong>BSc Mathematics</strong>
+                <span>University of Havana &middot; 2011&ndash;2015</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin-top:32px">Publications</h3>
+          <div class="stack-list">
+            <div class="stack-row">
+              <svg aria-hidden="true"><use href="#i-book"/></svg>
+              <div>
+                <strong>National Population Aging Survey 2017</strong>
+                <span>National Statistics Office &middot; results published 2017</span>
+              </div>
+            </div>
+            <div class="stack-row">
+              <svg aria-hidden="true"><use href="#i-book"/></svg>
+              <div>
+                <strong>National Migration Survey 2016</strong>
+                <span>National Statistics Office</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <h3>Certifications</h3>
+          <div class="stack-list">
+            <div class="stack-row">
+              <svg aria-hidden="true"><use href="#i-badge"/></svg>
+              <div>
+                <strong>Career Essentials in Data Analysis</strong>
+                <span>Microsoft &amp; LinkedIn</span>
+              </div>
+            </div>
+            <div class="stack-row">
+              <svg aria-hidden="true"><use href="#i-badge"/></svg>
+              <div>
+                <strong>DataCamp tracks &amp; courses</strong>
+                <span>Data Analyst in SQL &middot; Data Analyst with R &middot; Analyzing Data in Tableau &middot; SQL Fundamentals</span>
+              </div>
+            </div>
+            <div class="stack-row">
+              <svg aria-hidden="true"><use href="#i-badge"/></svg>
+              <div>
+                <strong>LinkedIn Learning</strong>
+                <span>Master SQL for Data Science &middot; SQL: Data Reporting and Analysis &middot; Building and Deploying Deep Learning Applications with TensorFlow</span>
+              </div>
+            </div>
+            <div class="stack-row">
+              <svg aria-hidden="true"><use href="#i-badge"/></svg>
+              <div>
+                <strong>Verified International Academic Qualifications</strong>
+                <span>Mathematics &middot; World Education Services</span>
+              </div>
+            </div>
+            <div class="stack-row">
+              <svg aria-hidden="true"><use href="#i-badge"/></svg>
+              <div>
+                <strong>1st place &mdash; Future Mobility Challenge 2023</strong>
+                <span>Deep learning &amp; computer vision for autonomous vehicles</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Contact ============ -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact-card reveal">
+        <p class="kicker">Contact</p>
+        <h2 style="margin-top:10px">Let's talk about your data</h2>
+        <p class="lead">
+          Looking for an analyst who can do the statistics, build the model and then explain it to the room?
+          I reply to every message.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:alero0428@gmail.com">
+            <svg aria-hidden="true"><use href="#i-mail"/></svg> alero0428@gmail.com
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/alejandro-rodriguez-orama-3a2b24155/" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-linkedin"/></svg> LinkedIn
+          </a>
+          <a class="btn" href="https://github.com/arol9204" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-github"/></svg> GitHub
+          </a>
+          <a class="btn" href="images/Data%20Analyst%20-%20Alejandro%20Rodriguez%20Resume.pdf" target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-file"/></svg> Résumé (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>&copy; <span data-year>2026</span> Alejandro Rodriguez Orama &middot; Windsor, Ontario</p>
+    <div class="foot-links">
+      <a class="btn btn-icon btn-ghost" href="https://github.com/arol9204" target="_blank" rel="noopener" aria-label="GitHub"><svg aria-hidden="true"><use href="#i-github"/></svg></a>
+      <a class="btn btn-icon btn-ghost" href="https://www.linkedin.com/in/alejandro-rodriguez-orama-3a2b24155/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg aria-hidden="true"><use href="#i-linkedin"/></svg></a>
+      <a class="btn btn-icon btn-ghost" href="mailto:alero0428@gmail.com" aria-label="Email"><svg aria-hidden="true"><use href="#i-mail"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
 </html>

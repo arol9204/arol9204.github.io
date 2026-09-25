@@ -1,95 +1,219 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Electric Vehicles in Washington - Project Details</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>EV Adoption in Washington State — Alejandro Rodriguez</title>
+<meta name="description" content="A Tableau story on electric vehicle growth in Washington State: who is winning which city, and how range, price and charging speed compare across manufacturers." />
+<meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314161a'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' fill='%23fbfbf9' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="assets/css/site.css" />
+<script>
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
 </head>
-<body class="is-preload">
+<body>
 
-<article class="wrapper style1">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <header>
-                    <h2>Electric Vehicles in Washington State, US</h2>
-                </header>
+<a class="skip" href="#main">Skip to content</a>
 
-                <h2><a href="https://public.tableau.com/app/profile/alejandro.rodriguez.orama/viz/EVpopulationinWashington/Story" class="image"><img src="images/tableau icon.png" alt="" width="90" height="30" /></a></h2>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+</svg>
 
-                <p>A Tableau story with different dashboards about the EV population growth in Washington.</p>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">AR</span>
+      <span>alejandro&#8203;rodriguez</span>
+    </a>
+    <a class="back" href="index.html#work"><svg aria-hidden="true"><use href="#i-arrow-left"/></svg> All work</a>
+    <button class="btn btn-icon btn-ghost" data-theme-toggle type="button" aria-label="Switch theme">
+      <svg class="icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      <svg class="icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+    </button>
+  </div>
+</header>
 
-                <div class='tableauPlaceholder' id='viz1704470391041' style='position: relative'><noscript>
-                    <a href='#'><img alt='Story ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;YG&#47;YG4QZYZY3&#47;1_rss.png' style='border: none' /></a>
-                </noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                    <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;YG4QZYZY3' /> <param name='toolbar' value='yes' />
-                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;YG&#47;YG4QZYZY3&#47;1.png' /> 
-                    <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
-                    <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                
-                    <script type='text/javascript'>                    
-                    var divElement = document.getElementById('viz1704470391041');                    
-                    var vizElement = divElement.getElementsByTagName('object')[0];                    
-                    vizElement.style.width='1280px';vizElement.style.height='1024px';                    
-                    var scriptElement = document.createElement('script');                    
-                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+<main id="main">
 
+  <section class="case-hero">
+    <div class="wrap">
+      <p class="kicker">Data storytelling &middot; Tableau</p>
+      <h1>EV Adoption in Washington State</h1>
+      <p class="lead">
+        A Tableau story tracking how fast the electric fleet is growing, which manufacturer owns which city,
+        and how range, price and charging speed actually compare once you put them side by side.
+      </p>
 
-                <section>
-                    <h3>Project Details</h3>
-                    
-                    <p>The US Department of Energy made significant effort in battery development which resulted in 50% cost of the battery and within 4 years more affordable EVs were made. Today, consumers now have multitude of choices when buying EVs ranging from Hybrids, plug-in-hybrids, and electric across the world. This project will help to explore the growth rate of EV cars in Washington state while also exploring the performance of electric vehicles among diverse Manufacturers.</p>
-                    
-                    <p>The project work aims to provide insights into the following:</p>
-                    
-                    <p>1. Explore the growth rate of EV cars growing in Washington State?</p>
-                    <li>What are the best-selling EV Manufacturer and models?</li>
-                    <li>Which manufacturer dominates the different cities in Washington State?</li>
-                    <li>Differentiating factors for the all-electric or plug-in hybrid vehicles per Manufacturer and city.</li>
-                    <li>Which brand identifies more with all-electric, plug-in hybrid vehicles, or a combination of both?</li>
-                    <li>Which cities in Washington state have the highest number of electric vehicles?</li>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://public.tableau.com/app/profile/alejandro.rodriguez.orama/viz/EVpopulationinWashington/Story" target="_blank" rel="noopener">
+          Open on Tableau Public <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+        </a>
+      </div>
 
-                    <p>2. Explore the performance of electric vehicles among the diverse Manufacturers?</p>
-                    <li>Compare the electric range among different manufacturers.</li>
-                    <li>Compare the speed performance among different manufacturers.</li>
-                    <li>Compare Fast charging rate among different manufacturers.</li>
-                    <li>Compare the retail prices vs the efficiency.</li>
-
-                    <p>3. Provides a guide for potential buyers of EVs</p>
-                    <div class='tableauPlaceholder' id='viz1704470679726' style='position: relative'>
-                        <noscript><a href='#'><img alt='Dashboard 3 Electric vehicles comparison ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;EV&#47;EVpopulationinWashington&#47;Dashboard3Electricvehiclescomparison&#47;1_rss.png' style='border: none' />
-                        </a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
-                            <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EVpopulationinWashington&#47;Dashboard3Electricvehiclescomparison' />
-                            <param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;EV&#47;EVpopulationinWashington&#47;Dashboard3Electricvehiclescomparison&#47;1.png' />
-                            <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
-                            <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' /></object></div>                
-                            <script type='text/javascript'>                    var divElement = document.getElementById('viz1704470679726');                    
-                            var vizElement = divElement.getElementsByTagName('object')[0];                    
-                            vizElement.style.width='1280px';vizElement.style.height='1024px';                    
-                            var scriptElement = document.createElement('script');                    
-                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-                            vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-                
-                </section>
-
-                <section>
-                    <h3>Additional Content</h3>
-                    <p>You can add more sections or content as needed.</p>
-                </section>
-
-                <p><a href="index.html">&lt; Back to Portfolio</a></p>
-            </div>
-        </div>
+      <dl class="case-meta">
+        <div><dt>Tool</dt><dd>Tableau Desktop / Public</dd></div>
+        <div><dt>Output</dt><dd>Multi-dashboard story</dd></div>
+        <div><dt>Techniques</dt><dd>KPIs, spider charts, geospatial, parameters</dd></div>
+        <div><dt>Audience</dt><dd>Prospective EV buyers &amp; policy readers</dd></div>
+      </dl>
     </div>
-</article>
+  </section>
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="prose">
 
+        <h2>Why this data</h2>
+        <p>
+          US Department of Energy investment in battery development cut battery cost by roughly half, and
+          within four years genuinely affordable EVs reached the market. Buyers now choose between hybrids,
+          plug-in hybrids and full battery-electric vehicles. Washington State publishes a registration-level
+          dataset of every one of them — which makes it the right place to ask what adoption actually looks
+          like on the ground.
+        </p>
+
+        <h2>Questions the story answers</h2>
+
+        <h3>1. How fast is the EV fleet growing?</h3>
+        <ul class="bullets">
+          <li>Which manufacturers and models sell best?</li>
+          <li>Which manufacturer dominates each city in the state?</li>
+          <li>What separates all-electric from plug-in hybrid buyers, by manufacturer and by city?</li>
+          <li>Which brands commit to all-electric, which hedge with hybrids, and which do both?</li>
+          <li>Which cities hold the highest concentration of electric vehicles?</li>
+        </ul>
+
+        <h3>2. How do the vehicles themselves compare?</h3>
+        <ul class="bullets">
+          <li>Electric range across manufacturers.</li>
+          <li>Speed and performance across manufacturers.</li>
+          <li>Fast-charging rate across manufacturers.</li>
+          <li>Retail price against efficiency — the trade-off buyers actually face.</li>
+        </ul>
+
+        <h3>3. What should a buyer do with this?</h3>
+        <p>
+          The final dashboard is built as a decision aid: filter to a budget and a minimum range, and see
+          which models survive.
+        </p>
+      </div>
+
+      <div class="tableau-shell">
+        <div class="tableauPlaceholder" id="vizStory" style="position: relative">
+          <noscript>
+            <a href="https://public.tableau.com/app/profile/alejandro.rodriguez.orama/viz/EVpopulationinWashington/Story">
+              <img alt="EV population in Washington — Tableau story" src="https://public.tableau.com/static/images/YG/YG4QZYZY3/1_rss.png" style="border: none" />
+            </a>
+          </noscript>
+          <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+            <param name="embed_code_version" value="3" />
+            <param name="path" value="shared&#47;YG4QZYZY3" />
+            <param name="toolbar" value="yes" />
+            <param name="static_image" value="https://public.tableau.com/static/images/YG/YG4QZYZY3/1.png" />
+            <param name="animate_transition" value="yes" />
+            <param name="display_static_image" value="yes" />
+            <param name="display_spinner" value="yes" />
+            <param name="display_overlay" value="yes" />
+            <param name="display_count" value="yes" />
+            <param name="language" value="en-GB" />
+          </object>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h2>Vehicle comparison dashboard</h2>
+        <p>
+          Range, performance, charging rate and price on one canvas, so no single spec gets to tell the whole
+          story on its own.
+        </p>
+      </div>
+
+      <div class="tableau-shell">
+        <div class="tableauPlaceholder" id="vizCompare" style="position: relative">
+          <noscript>
+            <a href="https://public.tableau.com/app/profile/alejandro.rodriguez.orama/viz/EVpopulationinWashington/Story">
+              <img alt="Electric vehicles comparison dashboard" src="https://public.tableau.com/static/images/EV/EVpopulationinWashington/Dashboard3Electricvehiclescomparison/1_rss.png" style="border: none" />
+            </a>
+          </noscript>
+          <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+            <param name="embed_code_version" value="3" />
+            <param name="site_root" value="" />
+            <param name="name" value="EVpopulationinWashington&#47;Dashboard3Electricvehiclescomparison" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="yes" />
+            <param name="static_image" value="https://public.tableau.com/static/images/EV/EVpopulationinWashington/Dashboard3Electricvehiclescomparison/1.png" />
+            <param name="animate_transition" value="yes" />
+            <param name="display_static_image" value="yes" />
+            <param name="display_spinner" value="yes" />
+            <param name="display_overlay" value="yes" />
+            <param name="display_count" value="yes" />
+            <param name="language" value="en-GB" />
+          </object>
+        </div>
+      </div>
+
+      <div class="prose">
+        <h2>What I took from it</h2>
+        <ul class="bullets">
+          <li>A story beats a dashboard when the audience does not already know the question — sequence carries more than interactivity.</li>
+          <li>Spider charts earn their keep for multi-spec comparison, and almost nothing else.</li>
+          <li>Registration data is a proxy for adoption, not adoption itself; saying so in the viz is part of the analysis.</li>
+        </ul>
+      </div>
+
+      <div class="next-nav">
+        <a class="back" href="index.html#work"><svg aria-hidden="true"><use href="#i-arrow-left"/></svg> Back to all work</a>
+        <a class="btn" href="project_details_ESAI.html">Next: English Speaking AI-Examiner <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>&copy; <span data-year>2026</span> Alejandro Rodriguez Orama &middot; Windsor, Ontario</p>
+    <div class="foot-links"><a class="card-link" href="index.html">Portfolio home</a></div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+<script>
+  // Size each Tableau viz to its container instead of a fixed 1280px.
+  ['vizStory', 'vizCompare'].forEach(function (id) {
+    var holder = document.getElementById(id);
+    if (!holder) return;
+    var viz = holder.getElementsByTagName('object')[0];
+    var width = Math.max(holder.offsetWidth, 320);
+
+    if (width > 800) {
+      viz.style.width = '100%';
+      viz.style.height = '827px';
+    } else if (width > 500) {
+      viz.style.width = '100%';
+      viz.style.height = '827px';
+    } else {
+      viz.style.width = '100%';
+      viz.style.height = '1200px';
+    }
+
+    var s = document.createElement('script');
+    s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    viz.parentNode.insertBefore(s, viz);
+  });
+</script>
 </body>
 </html>

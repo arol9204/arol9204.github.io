@@ -1,109 +1,188 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Recycling Collection Service - Project Details</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>RecyclingNet — Alejandro Rodriguez</title>
+<meta name="description" content="An Ontario recycling pickup platform built on computer vision: a fine-tuned YOLO11 OBB model finds recyclables in a photo, geotags the request and routes collectors to the best pickups." />
+<meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314161a'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' fill='%23fbfbf9' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="assets/css/site.css" />
+<script>
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
 </head>
-<body class="is-preload">
+<body>
 
-<!-- Project Details -->
-<article class="wrapper style1">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <header>
-                    <h2>Recycling Collection Service</h2>
-                </header>
+<a class="skip" href="#main">Skip to content</a>
 
-                <h2><a href="https://github.com/arol9204/Capstone" target= "_blank" class="icon brands fa-github"><span class="label">Github</span></a></h2>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+</svg>
 
-                <!-- Project Description -->
-                <section>
-                    <h3>Project Description</h3>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">AR</span>
+      <span>alejandro&#8203;rodriguez</span>
+    </a>
+    <a class="back" href="index.html#work"><svg aria-hidden="true"><use href="#i-arrow-left"/></svg> All work</a>
+    <button class="btn btn-icon btn-ghost" data-theme-toggle type="button" aria-label="Switch theme">
+      <svg class="icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      <svg class="icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+    </button>
+  </div>
+</header>
 
-                    <p>Capstone Project for Data Analytics for Business at St. Clair College</p>
+<main id="main">
 
-                    <p>One of the main challenges that we face when we arrive in Canada as international students is finding a job, recycling is one of the ways that we can earn some extra money without uploading hundreds of resumes or hacking a personal interview, and the best part is we will be doing a great work for our planet.</p>
+  <section class="case-hero">
+    <div class="wrap">
+      <p class="kicker">Live platform &middot; grew out of my St. Clair College capstone</p>
+      <h1>RecyclingNet</h1>
+      <p class="lead">
+        Photograph a pile of cans and bottles; the app counts them, pins them to a map, and turns them
+        into a pickup request someone can profit from. Uber-style matching, but for recyclables.
+      </p>
 
-                    <p>Currently, the city of Windsor's Open Data Catalogue records nearly 5,000 service requests for uncollected recycling in 2022. Assuming an average of 5 glass bottles (10¢), and 15 cans (TBS/LCBO) (10¢), a basic profit of $10,000 can be generated.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://recyclingnet.org/" target="_blank" rel="noopener">
+          Visit recyclingnet.org <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg>
+        </a>
+        <a class="btn" href="https://github.com/arol9204/Capstone" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-github"/></svg> View the code
+        </a>
+      </div>
 
-                    <p>However, monetary gain is not the sole focus. The Government of Canada emphasizes the importance of recycling:</p>
-
-                    <a href="https://www.canada.ca/en/environment-climate-change/services/managing-reducing-waste/reduce-plastic-waste.html" target= "_blank">"Canadians throw away over 3 million tonnes of plastic waste every year. Only 9% is recycled while the rest ends up in our landfills"</a>
-
-                    <!-- Project Images (Add more if needed) -->
-                    <div class="image fit">
-                        <img src="images/Plastic_waste.png" alt="Recycling Collection Service" />
-                    </div>
-
-                    <p>This project aims to enhance the circular life of recycled materials in Windsor by engaging St. Clair students in the process.</p>
-
-                    <p>A key project outcome entails the development of a mobile application that showcases current recycling collection requests in the area. By leveraging machine learning algorithms, we can optimize collection routes to maximize the number of recyclable materials collected, resulting in greater financial returns for participants and considering factors such as waste weight and type (e.g., glass bottles, cans, etc.).</p>
-
-                    <p>In essence, this initiative operates similarly to business models such as Uber or Lyft, but instead of connecting riders with drivers, we connect recyclable object collectors with multiple recycling service requests.</p>
-                
-                </section>
-
-                <section>
-                    <h3>App UI</h3>
-
-                    <li>Request tab</li>
-
-                    <p>In this tab, people can upload a picture taken with some of the recycling objects that the model was trained to detect (tin cans, glass bottles, plastic bottles). The interface will show then the number of elements per class together with the latitude and longitude where the image was taken.</p>
-                    <!-- Project Images (Add more if needed) -->
-                    <div class="image fit">
-                        <img src="images/1. Request tab.png" alt="Recycling Collection Service" />
-                    </div>
-
-
-                    <li>Map tab</li>
-
-                    <p>This tab shows all the requests collected on a map. I have been collecting images in Windsor for around four months, and so far I have taken more than 200 pictures with one or more of the targeted objects.</p>
-                    <!-- Project Images (Add more if needed) -->
-                    <div class="image fit">
-                        <img src="images/2. Map tab.png" alt="Recycling Collection Service" />
-                    </div>
-
-                    <li>Dashboard tab</li>
-
-                    <p>This tab shows a dashboard about the key metrics for this project. It has the total number of requests, the total cans, glass bottles, and plastic bottles detected among all the requests. In addition, there is a bar chart with the number of requests per day since I started collecting images. Lastly, there are three heatmaps that visualize the magnitude of the presence of each of the classes in Windsor areas.</p>
-                    <!-- Project Images (Add more if needed) -->
-                    <div class="image fit">
-                        <img src="images/3. Dashboard tab.png" alt="Recycling Collection Service" />
-                    </div>
-                </section>
-                
-                <!-- Additional Project Details -->
-                <section>
-                    <h3>Project technical Details</h3>
-                    <p>This section can contain more detailed information about the project, such as the technologies used, challenges faced, and the impact of the project.</p>
-                </section>
-
-                <!-- Code Snippets or Additional Content -->
-                <section>
-                    <h3>Code Snippets</h3>
-                    <p>You can showcase relevant code snippets or any other content related to the project.</p>
-                    <pre><code>// Insert code snippet here</code></pre>
-                </section>
-
-                <!-- Add more sections or content as needed -->
-
-                <!-- Back to Portfolio Link -->
-                <p><a href="index.html">&lt; Back to Portfolio</a></p>
-            </div>
-        </div>
+      <dl class="case-meta">
+        <div><dt>Role</dt><dd>Sole author &mdash; data, model, app</dd></div>
+        <div><dt>Model</dt><dd>YOLO11 oriented bounding box, fine-tuned</dd></div>
+        <div><dt>Data</dt><dd>Custom 3-class set, annotated in Label Studio</dd></div>
+        <div><dt>Classes</dt><dd>Tin cans, glass bottles, plastic bottles</dd></div>
+      </dl>
     </div>
-</article>
+  </section>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="prose">
 
+        <h2>The problem</h2>
+        <p>
+          One of the first things international students hit on arriving in Canada is the job search.
+          Collecting recyclables is a way to earn money without sending out hundreds of résumés — and it
+          happens to be good for the planet. What is missing is the matching layer: collectors do not know
+          where the material is.
+        </p>
+        <p>
+          The City of Windsor's Open Data Catalogue logged nearly <strong>5,000 service requests</strong> for
+          uncollected recycling in 2022. At an average of 5 glass bottles and 15 cans per request at 10&cent;
+          deposit each, that is roughly <strong>$10,000</strong> sitting on the curb.
+        </p>
+
+        <blockquote class="quote">
+          Canadians throw away over 3 million tonnes of plastic waste every year. Only 9% is recycled while
+          the rest ends up in our landfills.
+          <cite>
+            <a href="https://www.canada.ca/en/environment-climate-change/services/managing-reducing-waste/reduce-plastic-waste.html" target="_blank" rel="noopener">Government of Canada &mdash; Reduce plastic waste</a>
+          </cite>
+        </blockquote>
+
+        <figure class="figure">
+          <img src="images/Plastic_waste.png" alt="Chart of plastic waste generated and recycled in Canada" loading="lazy" decoding="async" />
+          <figcaption>Where Canada's plastic actually ends up.</figcaption>
+        </figure>
+
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li>A user uploads a photo of recyclables from their phone.</li>
+          <li>A fine-tuned object-detection model counts the items in each class.</li>
+          <li>Geolocation is pulled from the image metadata and the request is written to PostgreSQL.</li>
+          <li>Requests surface on a shared map, so collectors can plan a route that maximises the haul.</li>
+        </ol>
+        <p>
+          For the capstone I trained on a custom dataset labelled in Roboflow, comparing <strong>MobileNet</strong>,
+          <strong>EfficientDet Lite</strong> and <strong>YOLOv5</strong> before settling on the
+          accuracy/latency trade-off that worked on a phone-sized image.
+        </p>
+
+        <h2>The app</h2>
+
+        <h3>Request tab</h3>
+        <p>
+          Upload a picture containing any of the three trained classes. The interface returns the count per
+          class together with the latitude and longitude where the image was taken.
+        </p>
+        <figure class="figure">
+          <img src="images/1.%20Request%20tab.png" alt="Request tab showing detected recyclables and their coordinates" loading="lazy" decoding="async" />
+        </figure>
+
+        <h3>Map tab</h3>
+        <p>
+          Every request plotted on a map. I collected images across Windsor for about four months and ended
+          up with more than 200 photos containing one or more of the target objects.
+        </p>
+        <figure class="figure">
+          <img src="images/2.%20Map%20tab.png" alt="Map of collected recycling requests across Windsor" loading="lazy" decoding="async" />
+        </figure>
+
+        <h3>Dashboard tab</h3>
+        <p>
+          The key metrics: total requests, totals per class, requests per day since collection began, and
+          three heatmaps showing where each material concentrates across Windsor.
+        </p>
+        <figure class="figure">
+          <img src="images/3.%20Dashboard%20tab.png" alt="Dashboard with KPIs, daily request volume and density heatmaps" loading="lazy" decoding="async" />
+        </figure>
+
+        <h2>Where it is now</h2>
+        <p>
+          The capstone prototype became <strong><a href="https://recyclingnet.org/" target="_blank" rel="noopener">recyclingnet.org</a></strong>,
+          a recycling pickup platform for Ontario. The detection model was rebuilt along the way.
+        </p>
+        <ul class="bullets">
+          <li><strong>YOLO11, oriented-bounding-box variant.</strong> Containers photographed on the ground are rarely axis-aligned; OBB boxes fit a bottle lying at an angle far more tightly than an upright rectangle, which cut double-counting in cluttered piles.</li>
+          <li><strong>Custom three-class dataset</strong> — tin cans, glass bottles, plastic bottles — annotated through a <strong>Label Studio</strong> pipeline, split <strong>70/20/10</strong> across train, validation and test.</li>
+          <li><strong>Fine-tuned on a Colab T4 GPU</strong> with the <strong>AdamW</strong> optimiser, which held up better than plain Adam once the learning rate came down.</li>
+        </ul>
+
+        <h2>What I took from it</h2>
+        <ul class="bullets">
+          <li>Collecting and labelling my own dataset was the expensive part — and the part that taught me the most about class imbalance and lighting conditions.</li>
+          <li>Storing image metadata in PostgreSQL rather than in the app made the map and dashboard trivial to build on top.</li>
+          <li>Annotation quality set the ceiling on the model. Moving to a real Label Studio pipeline paid off more than any architecture change.</li>
+          <li>A model is only half the product; the routing and the incentive design are what make anyone use it.</li>
+        </ul>
+
+      </div>
+
+      <div class="next-nav">
+        <a class="back" href="index.html#work"><svg aria-hidden="true"><use href="#i-arrow-left"/></svg> Back to all work</a>
+        <a class="btn" href="project_details_CTS.html">Next: Traffic Sign Classification <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>&copy; <span data-year>2026</span> Alejandro Rodriguez Orama &middot; Windsor, Ontario</p>
+    <div class="foot-links"><a class="card-link" href="index.html">Portfolio home</a></div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
 </body>
 </html>

@@ -1,78 +1,142 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Classifying Traffic Sign - Project Details</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Traffic Sign Classification for AVs — Alejandro Rodriguez</title>
+<meta name="description" content="First place in the 2023 Future Mobility Challenge: deep CNNs and transfer learning to classify 43 traffic sign classes for autonomous vehicles." />
+<meta name="theme-color" content="#fbfbf9" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314161a'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='30' font-weight='700' fill='%23fbfbf9' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
+<link rel="stylesheet" href="assets/css/site.css" />
+<script>
+  try {
+    var t = localStorage.getItem('theme');
+    if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+</script>
 </head>
-<body class="is-preload">
+<body>
 
-<article class="wrapper style1">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <header>
-                    <h2>Future Mobility Challenge: Deep Learning and Computer Vision for Autonomous Vehicles (AVs)</h2>
-                    <caption>Challenge Mentor: Ryan Ahmed, Ph.D., MBA Professor, McMaster University</caption>
-                </header>
+<a class="skip" href="#main">Skip to content</a>
 
-                
-                <h2><a href="https://github.com/arol9204/CLASSIFY_TRAFFIC_SIGNS" target= "_blank" class="icon brands fa-github"><span class="label">Github</span></a></h2>
-                
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-github" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  <symbol id="i-arrow-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+</svg>
 
-                <section>
-                    <h3>Project Details</h3>
-                    <p>The automotive industry is going through a paradigm shift from conventional, human-driven vehicles into Autonomous,Artificial Intelligence (AI)-powered vehicles. AVs offer a safe, efficient, and cost-effective solution that will dramaticallyredefine the future of human mobility. AVs are expected to save over half a million lives and generate enormous economicopportunities in excess of $1 trillion dollars by 2035. From GM’s Cruise and Google’s autonomous car (Waymo) to Uber’sself-driving car-sharing service, the automotive industry is on a billion-dollar quest to deploy the most technologicallyadvanced vehicles on the road.</p>
-                    <p>In this challenge, you are tasked to train and evaluate several deep CNNs to classify traffic sign images. 
-                        The dataset contains colored 32 x 32 pixels images with 43 different traffic sign classes. 
-                        Images are divided into 34799 images for training, 12630 for testing and 4410 for validation. 
-                        </p>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">AR</span>
+      <span>alejandro&#8203;rodriguez</span>
+    </a>
+    <a class="back" href="index.html#work"><svg aria-hidden="true"><use href="#i-arrow-left"/></svg> All work</a>
+    <button class="btn btn-icon btn-ghost" data-theme-toggle type="button" aria-label="Switch theme">
+      <svg class="icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      <svg class="icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+    </button>
+  </div>
+</header>
 
-                    <div class="image fit">
-                        <img src="images/traffic signs.png" alt="Classifying Traffic Sign" />
-                    </div>
-        
-                    <ol>
-                        <h4> Challenge Deliverables: </h4>
-                            <li>Research AlexNet Convolutional Neural Network, draw the network architecture, and indicate the use of each of the layers such as convolution/feature extraction, max pooling, and flattening layers. </li>
-                            <li>Visualize a sample image from each class in the dataset. Display the corresponding label and perform a sanity check. </li>
-                            <li>Train a CNN based on AlexNet to classify traffic signs. Train the model using 15 epochs and plot the network accuracy vs. the number of epochs. </li>
-                            <li>Test the trained CNN and evaluate its performance on the testing (holdout) dataset. Note that the testing dataset has never been seen by the model during training.</li>
-                            <li>Fine-tune the trained model by training it on additional datasets. Feel free to collect data from the internet or using a mobile device.</li>
-                            <li>Explore 3 different ways to improve the network accuracy such as increasing the number of epochs, adding additional convolutional/max-pooling layers, or adding dropout layers. Retrain the network and display the results. Any reasonable answer should be sufficient.</li>
-                            <li>Build 3 different deep convolutional neural networks with various architectures. Feel free to choose the number of layers, number of kernels (feature detectors), number of dense (Fully-connected) layers, number of neurons in the dense layer, activation functions, regularization such as dropout..etc. Retrain the network and plot the results.</li>
-                            <li>Test the trained deep CNNs on brand-new images. This might involve collecting traffic sign data and evaluating the system's performance and make adjustment as necessary.</li>
-                    </ol>
-                </section>
+<main id="main">
 
-                
-                
-                
+  <section class="case-hero">
+    <div class="wrap">
+      <p class="kicker">1st place &middot; Future Mobility Challenge 2023</p>
+      <h1>Traffic Sign Classification for Autonomous Vehicles</h1>
+      <p class="lead">
+        Deep convolutional networks trained to read 43 classes of traffic sign from 32&times;32 pixel images —
+        built from scratch, then beaten by transfer learning from VGG16 and ResNet V2.
+      </p>
 
-                
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/arol9204/CLASSIFY_TRAFFIC_SIGNS" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-github"/></svg> View the code
+        </a>
+      </div>
 
-                <section>
-                    <h3>Additional Content</h3>
-                    <p>1st Place Prize (Value): $500</p>
-                    <div class="image fit">
-                        <img src="images/Future Mobility Challenge 2023.jpeg" alt="Classifying Traffic Sign" />
-                        <caption>*I'm the third person from the right to the left.</caption>
-                    </div>
-                </section>
-
-                <p><a href="index.html">&lt; Back to Portfolio</a></p>
-            </div>
-        </div>
+      <dl class="case-meta">
+        <div><dt>Result</dt><dd>1st place &mdash; $500 prize</dd></div>
+        <div><dt>Mentor</dt><dd>Ryan Ahmed, PhD, MBA &mdash; McMaster University</dd></div>
+        <div><dt>Stack</dt><dd>TensorFlow, Keras, Pandas, Matplotlib</dd></div>
+        <div><dt>Dataset</dt><dd>34,799 train &middot; 4,410 val &middot; 12,630 test</dd></div>
+      </dl>
     </div>
-</article>
+  </section>
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="prose">
 
+        <h2>The challenge</h2>
+        <p>
+          The automotive industry is shifting from human-driven vehicles to autonomous, AI-powered ones.
+          Self-driving systems are expected to save hundreds of thousands of lives and create an economic
+          opportunity measured in trillions by 2035 — but only if perception is reliable. Reading a stop sign
+          correctly, every time, in rain and glare, is the unglamorous core of that.
+        </p>
+        <p>
+          The task: train and evaluate several deep CNNs to classify traffic-sign images. Colour images at
+          32&times;32 pixels, <strong>43 classes</strong>, split into 34,799 training, 4,410 validation and
+          12,630 held-out test images the model never sees during training.
+        </p>
+
+        <figure class="figure">
+          <img src="images/traffic%20signs.png" alt="Sample traffic sign images from each of the 43 classes" loading="lazy" decoding="async" />
+          <figcaption>One sample per class, with its label — the sanity check before any modelling.</figcaption>
+        </figure>
+
+        <h2>What I built</h2>
+        <ol class="steps">
+          <li>Researched the AlexNet architecture and mapped each layer's job: convolution and feature extraction, max pooling, flattening, dense classification.</li>
+          <li>Visualised a sample image from every class with its label, as a sanity check on the data.</li>
+          <li>Trained an AlexNet-style CNN over 15 epochs, plotting accuracy against epoch to see where it plateaued.</li>
+          <li>Evaluated on the holdout test set — data the network had never touched.</li>
+          <li>Fine-tuned on additional images collected from the web and from a phone camera.</li>
+          <li>Ran three separate accuracy experiments: more epochs, extra convolution and pooling layers, and dropout regularisation.</li>
+          <li>Built three further architectures varying kernel counts, dense-layer width, activations and regularisation, and compared them.</li>
+          <li>Tested the best networks on brand-new signs photographed outside the dataset.</li>
+        </ol>
+
+        <h2>What made the difference</h2>
+        <ul class="bullets">
+          <li><strong>Transfer learning beat scratch training.</strong> Fine-tuning VGG16 and ResNet V2 got more out of 34k small images than any network I trained from zero.</li>
+          <li><strong>Dropout mattered more than depth.</strong> Adding layers past a point bought training accuracy and lost test accuracy; dropout closed the gap.</li>
+          <li><strong>The holdout set is the only honest number.</strong> Validation accuracy drifted optimistic as soon as I started tuning against it.</li>
+        </ul>
+
+        <h2>The result</h2>
+        <p>First place out of the competing teams, and a $500 prize.</p>
+        <figure class="figure">
+          <img src="images/Future%20Mobility%20Challenge%202023.jpeg" alt="Future Mobility Challenge 2023 award ceremony" loading="lazy" decoding="async" />
+          <figcaption>Future Mobility Challenge 2023 &mdash; I am third from the right.</figcaption>
+        </figure>
+
+      </div>
+
+      <div class="next-nav">
+        <a class="back" href="index.html#work"><svg aria-hidden="true"><use href="#i-arrow-left"/></svg> Back to all work</a>
+        <a class="btn" href="project_details_EV.html">Next: EV Adoption in Washington <svg aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <p>&copy; <span data-year>2026</span> Alejandro Rodriguez Orama &middot; Windsor, Ontario</p>
+    <div class="foot-links"><a class="card-link" href="index.html">Portfolio home</a></div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
 </body>
 </html>
