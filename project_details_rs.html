@@ -68,7 +68,7 @@
       <dl class="case-meta">
         <div><dt>Role</dt><dd>Sole author &mdash; data, model, app</dd></div>
         <div><dt>Model</dt><dd>YOLO11 oriented bounding box, fine-tuned</dd></div>
-        <div><dt>Data</dt><dd>Custom 3-class set, annotated in Label Studio</dd></div>
+        <div><dt>Pilot</dt><dd>34 pickups &middot; 216 items diverted</dd></div>
         <div><dt>Classes</dt><dd>Tin cans, glass bottles, plastic bottles</dd></div>
       </dl>
     </div>
@@ -117,33 +117,51 @@
           accuracy/latency trade-off that worked on a phone-sized image.
         </p>
 
-        <h2>The app</h2>
+        <h2>The app, live</h2>
 
-        <h3>Request tab</h3>
+        <h3>Book a pickup</h3>
         <p>
-          Upload a picture containing any of the three trained classes. The interface returns the count per
-          class together with the latitude and longitude where the image was taken.
+          A requester lands on the home page, snaps a photo of their cans and bottles, and sees the model
+          work in real time: an oriented box around every item, labelled by class, with a live weight and
+          CO&#8322; estimate. No sign-up to try it &mdash; the pilot stats on the homepage (pickups, items
+          diverted, deposits unlocked) update from real activity in Windsor.
         </p>
         <figure class="figure">
-          <img src="images/1.%20Request%20tab.png" alt="Request tab showing detected recyclables and their coordinates" loading="lazy" decoding="async" />
+          <img src="images/1.%20Home%20Page.png" alt="RecyclingNet home page with live pilot stats and an AI detection card showing oriented bounding boxes around cans and a glass bottle" loading="lazy" decoding="async" />
+          <figcaption>The landing page doubles as the demo: 13 items detected, 2.34&nbsp;kg, split 12 cans to 1 bottle.</figcaption>
         </figure>
 
-        <h3>Map tab</h3>
+        <h3>Collector queue</h3>
         <p>
-          Every request plotted on a map. I collected images across Windsor for about four months and ended
-          up with more than 200 photos containing one or more of the target objects.
+          Collectors work from a queue instead of an inbox. Every open request is filterable by pickup kind,
+          item type, distance and age, and plots on a map with clustered pin counts. Before committing to a
+          run, a collector sees exactly what they would keep &mdash; broken down by material, with the
+          charity split already subtracted.
         </p>
         <figure class="figure">
-          <img src="images/2.%20Map%20tab.png" alt="Map of collected recycling requests across Windsor" loading="lazy" decoding="async" />
+          <img src="images/2.%20Collector%20view.png" alt="Collector pickup queue with filters, a payout breakdown by material, and a map of open requests around Windsor and Detroit" loading="lazy" decoding="async" />
+          <figcaption>38 open requests, filtered and mapped, with the payout math shown before a collector commits to a route.</figcaption>
         </figure>
 
-        <h3>Dashboard tab</h3>
+        <h3>Requester impact dashboard</h3>
         <p>
-          The key metrics: total requests, totals per class, requests per day since collection began, and
-          three heatmaps showing where each material concentrates across Windsor.
+          Every pickup rolls up into a running impact statement for the requester: CO&#8322; prevented, the
+          driving distance that offsets, and the refund value generated &mdash; split automatically between
+          the collector's cut and the charity donation.
         </p>
         <figure class="figure">
-          <img src="images/3.%20Dashboard%20tab.png" alt="Dashboard with KPIs, daily request volume and density heatmaps" loading="lazy" decoding="async" />
+          <img src="images/3.%20Requester%20Dashboard.png" alt="Requester dashboard showing CO2 prevented, refund value generated, and the split between collector pay and charity" loading="lazy" decoding="async" />
+          <figcaption>1.05&nbsp;kg of CO&#8322; prevented so far, with the deposit value split between the collector and a local charity.</figcaption>
+        </figure>
+
+        <h3>Collector earnings dashboard</h3>
+        <p>
+          Collectors get their own view of the same data: pickups completed, net earnings, CO&#8322;
+          prevented, an 8-week earnings trend, and a running count of items collected by type.
+        </p>
+        <figure class="figure">
+          <img src="images/4.%20Collector%20Dasboard.png" alt="Collector dashboard showing 34 pickups completed, net earnings, an 8-week earnings chart, and items collected by type" loading="lazy" decoding="async" />
+          <figcaption>34 pickups, $14.92 earned, 36.77&nbsp;kg of CO&#8322; prevented &mdash; the pilot's numbers to date.</figcaption>
         </figure>
 
         <h2>Where it is now</h2>
